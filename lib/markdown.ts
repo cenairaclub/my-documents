@@ -69,11 +69,11 @@ const getDocumentPath = (() => {
 
 export async function getDocument(slug: string) {
   try {
-    const contentPath = getDocumentPath(slug)
     let rawMdx = ""
     let lastUpdated: string | null = null
 
     if (Settings.gitload) {
+      const contentPath = getDocumentPath(slug)
       const response = await fetch(contentPath)
       if (!response.ok) {
         throw new Error(
@@ -83,6 +83,21 @@ export async function getDocument(slug: string) {
       rawMdx = await response.text()
       lastUpdated = response.headers.get("Last-Modified") ?? null
     } else {
+      const pathMdx = path.join(process.cwd(), "/contents/docs/", `${slug}.mdx`)
+      const pathIndexMdx = path.join(
+        process.cwd(),
+        "/contents/docs/",
+        `${slug}/index.mdx`
+      )
+
+      let contentPath = pathIndexMdx
+      try {
+        await fs.access(pathMdx)
+        contentPath = pathMdx
+      } catch {
+        // Fallback to index.mdx
+      }
+
       rawMdx = await fs.readFile(contentPath, "utf-8")
       const stats = await fs.stat(contentPath)
       lastUpdated = stats.mtime.toISOString()
@@ -130,11 +145,21 @@ export async function getTable(
       return []
     }
   } else {
-    const contentPath = path.join(
+    const pathMdx = path.join(process.cwd(), "/contents/docs/", `${slug}.mdx`)
+    const pathIndexMdx = path.join(
       process.cwd(),
       "/contents/docs/",
       `${slug}/index.mdx`
     )
+
+    let contentPath = pathIndexMdx
+    try {
+      await fs.access(pathMdx)
+      contentPath = pathMdx
+    } catch {
+      // Fallback to index.mdx
+    }
+
     try {
       const stream = createReadStream(contentPath, { encoding: "utf-8" })
       for await (const chunk of stream) {
