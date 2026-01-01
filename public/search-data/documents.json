@@ -3,18 +3,20 @@
     "slug": "/introduction",
     "title": "Introduction",
     "description": "Welcome to the BetterCraft documentation site.",
-    "content": "# What is BetterCraft\n\nWelcome to BetterCraft documentation site!\n\nThis project is built using **%100 Blueprints**.\n\n# Before open the project:\n\n* Enable these plugins\n  * [**Fast Noise Generator**](https://www.fab.com/listings/c1d444fc-54cc-4f11-8a4a-c0c41112a321)\n  * [**Blueprint FileSDK**](https://www.fab.com/listings/9020eef3-f598-473d-9964-84ad507002be)\n",
+    "content": "# BetterCraft\n\nWelcome to BetterCraft documentation site!\n\n# Before open the project\n\nEnable these plugins\n\n* [**Fast Noise Generator**](https://www.fab.com/listings/c1d444fc-54cc-4f11-8a4a-c0c41112a321)\n* [**Blueprint FileSDK**](https://www.fab.com/listings/9020eef3-f598-473d-9964-84ad507002be)\n\n# Useful Links\n\n* [**BetterCraft Discord**](https://discord.gg/KrSDmBAq4E)\n* [**BetterCraft Youtube Playlist**](https://www.youtube.com/playlist?list=PL7bcRH59hL6Rqcn3Q_APGZtifw2B1y2FU)\n* [**BetterCraft Fab Product**](https://www.fab.com/listings/7c36c2f2-6456-4dcf-b64d-ceb90296e313)\n",
     "_searchMeta": {
-      "cleanContent": "what is bettercraft welcome to bettercraft documentation site this project is built using 100 blueprints before open the project: enable these plugins fast noise generator blueprint filesdk",
+      "cleanContent": "bettercraft welcome to bettercraft documentation site before open the project enable these plugins fast noise generator blueprint filesdk useful links bettercraft discord bettercraft youtube playlist bettercraft fab product",
       "headings": [],
       "keywords": [
         "introduction",
         "guide",
         "nextjs",
         "rubix-documents",
-        "%100 Blueprints",
         "Fast Noise Generator",
-        "Blueprint FileSDK"
+        "Blueprint FileSDK",
+        "BetterCraft Discord",
+        "BetterCraft Youtube Playlist",
+        "BetterCraft Fab Product"
       ]
     }
   }
