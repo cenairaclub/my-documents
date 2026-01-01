@@ -1,12 +1,12 @@
-export const url = "https://rubix-documents.vercel.app"
+export const url = "https://umutfaruk.vercel.app"
 export const siteicon = "/icon.png"
 
 export const gtm = "GTM-XXXXXXX"
 export const gtmconnected = true
 
-export const sitename = "Documents"
+export const sitename = "BetterCraft Documents"
 export const description =
-  "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements."
+  "BetterCraft Documentation"
 export const keywords = [
   "Next.js",
   "documentation",
@@ -16,10 +16,10 @@ export const keywords = [
 ]
 export const urlimage = "/images/og-image.png"
 export const imagealt = "Rubix Studios Documentation"
-export const twitterhandle = "@RubixStudios"
+export const twitterhandle = "@UmutFarukDilli"
 
-export const companyname = "Rubix Studios"
-export const companylink = "https://rubixstudios.com.au"
+export const companyname = "UmutFaruk"
+export const companylink = "https://www.fab.com/listings/7c36c2f2-6456-4dcf-b64d-ceb90296e313"
 
 export const branding = true
 export const rightsidebar = true
